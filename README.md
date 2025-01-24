@@ -30,11 +30,36 @@ Aspose.PDF is a CLI tool which makes working with PDF files very easy. It suppor
 * Convert XPS to PDF
 * Create PDF from XSL-FO
 
+
+## Installation on macOS
+
+To install `asposepdftool` on macOS using Homebrew, follow these steps:
+
+1. Add the tap for `asposepdftool`:
+   ```bash
+   brew tap aspose-pdf/asposepdftool https://github.com/aspose-pdf/asposepdftool
+   ```
+
+2. Install `asposepdftool`:
+   ```bash
+   brew install asposepdftool
+   ```
+
+3. Verify the installation:
+   ```bash
+   asposepdftool help
+   ```
+
+This will ensure that the tool is installed correctly and ready for use. 
+
+Please share your feedback, bugs and suggestions for improvement on email support-pdf@aspose.com or [free forum site](https://forum.aspose.com/).
+
+
 ## How to use Aspose.PDF CLI App:
 
 
 ### Optimize PDF
-```sh
+```bash
 asposepdftool optimize <input-file> [output-file]
 ```
 
@@ -45,7 +70,7 @@ asposepdftool optimize <input-file> [output-file]
 
 
 ### Extract text from PDF
-```sh
+```bash
 asposepdftool text <input-file> [output-file]
 ```
 
@@ -56,7 +81,7 @@ asposepdftool text <input-file> [output-file]
 
 
 ### Extract images from PDF
-```sh
+```bash
 asposepdftool images [-png] [-gs] <input-file> [destination-directory]
 ```
 By default, all images will be extracted as JPEG images. If you want to extract as PNG, please add `-png` key. Another key `-gs` allows to save gray-scaled images.
@@ -68,7 +93,7 @@ By default, all images will be extracted as JPEG images. If you want to extract 
 
 
 ### Merge PDF files into single document
-```sh
+```bash
 asposepdftool merge <PDF-sourcefile-1>..<PDF-sourcefile-n> <PDF-destinationfile>
 ```
 Merges source PDF files into destination PDF file. Use at least two source files.
@@ -76,7 +101,7 @@ Merges source PDF files into destination PDF file. Use at least two source files
 
 
 ### Split PDF files
-```sh
+```bash
 asposepdftool split <PDF-sourcefile> <number of page to split at> [PDF-destinationfile-1] [PDF-destinationfile-2]
 ```
 Split source PDF file into two parts PDF files based on specific page position (number).
@@ -88,7 +113,7 @@ Split source PDF file into two parts PDF files based on specific page position (
 
 
 ### Add images to PDF files
-```sh
+```bash
 asposepdftool addimages <PDF-source-file> [-out=result-file] <image-file-1>..<image-file-n>
 ```
 Add images to the end of the PDF document
@@ -98,7 +123,7 @@ Add images to the end of the PDF document
 
 
 ### Add stamp (watermark) to PDF files
-```sh
+```bash
 asposepdftool addstamp [options] <PDF-file> <image-file> [<result-file>]
 ```
 Adds the image as stamp to the PDF document. <br/>
@@ -117,7 +142,7 @@ Options:
 
 
 ### Decrypt PDF
-```sh
+```bash
 asposepdftool decrypt <PDF-file> <password> [<result-file>]
 ```
 Remove password protection from PDF document.
@@ -125,7 +150,7 @@ Remove password protection from PDF document.
 
 
 ### Encrypt PDF
-```sh
+```bash
 asposepdftool encrypt [options] <PDF-file> [<result-file>]
 ```
 Set password protection to PDF file<br/>
@@ -150,7 +175,7 @@ Options:
 
 
 ### Get PDF Metadata
-```sh
+```bash
 asposepdftool getinfo <PDF-file>
 ```
 Prints metadata.
@@ -158,7 +183,7 @@ Prints metadata.
 
 
 ### Set PDF Metadata
-```sh
+```bash
 asposepdftool setinfo [options] <PDF-file> [<result-file>]
 ```
 Set or update metadata in PDF document<br/>
@@ -176,7 +201,7 @@ Options:
 
 
 ### List of fonts in PDF
-```sh
+```bash
 asposepdftool fonts <PDF-file>
 ```
 Enumerate font in PDF
@@ -185,7 +210,7 @@ Enumerate font in PDF
 
 
 ### Remove page or pages from PDF
-```sh
+```bash
 asposepdftool delete -pages=range <PDF-file> [result-file]
 ```
 Delete specified pages from the PDF document. Range is a string with page numbers (ex. -pages=1,3,5-7)
@@ -194,7 +219,7 @@ Delete specified pages from the PDF document. Range is a string with page number
 
 
 ### Remove page or pages from PDF
-```sh
+```bash
 asposepdftool delete -pages=range <PDF-file> [result-file]
 ```
 Delete specified pages from the PDF document. Range is a string with page numbers (ex. -pages=1,3,5-7)
@@ -203,7 +228,7 @@ Delete specified pages from the PDF document. Range is a string with page number
 
 
 ### Convert PDF to PDF/A
-```sh
+```bash
 asposepdftool pdfa <PDF-file> [result-file] [-log=log-file]
 ```
 Convert the PDF document to PDF/A format. If the name of the result file is not specified the source pdf file will be overwritten
@@ -212,7 +237,7 @@ Convert the PDF document to PDF/A format. If the name of the result file is not 
 
 
 ### Set headers/footers to the PDF document pages
-```sh
+```bash
 asposepdftool header [-header=string] [-footer=string] <PDF-file> [result-file] [-log=log-file]
 ```
 Set headers/footers to the PDF document pages
@@ -221,7 +246,7 @@ Set headers/footers to the PDF document pages
 
 
 ### Set headers/footers to the PDF document pages
-```sh
+```bash
 asposepdftool background <PDF-file> <image-file> [result-file]
 ```
 Set headers/footers to the PDF document pages
@@ -230,7 +255,7 @@ Set headers/footers to the PDF document pages
 
 
 ### Make the PDF document grayscaled
-```sh
+```bash
 asposepdftool grayscale <PDF-file> [result-file]
 ```
 Convert PDF pages to grayscale format.
@@ -239,7 +264,7 @@ Convert PDF pages to grayscale format.
 
 
 ### Rotate pages in the PDF document
-```sh
+```bash
 asposepdftool rotate <PDF-file> [result-file]
 ```
 Turn pages clockwise or counterclockwise in PDF document.
@@ -252,7 +277,7 @@ Options:
 
 
 ### Sign the PDF document 
-```sh
+```bash
 asposepdftool sign [options] <PDF-file> [result-file]
 ```
 
@@ -273,7 +298,7 @@ Options:
 
 
 ### Convert PDF to JPEG
-```sh
+```bash
 asposepdftool jpg <PDF-file> [destination-directory]
 ```
 Save pages of the PDF document as JPEG images into specified directory. If the destination directory is not specified it will be the same as in the source pdf file
@@ -281,7 +306,7 @@ Save pages of the PDF document as JPEG images into specified directory. If the d
 
 
 ### Convert PDF to PNG
-```sh
+```bash
 asposepdftool png <PDF-file> [destination-directory]
 ```
 Save pages of the PDF document as PNG images into specified directory. If the destination directory is not specified it will be the same as in the source pdf file
@@ -289,7 +314,7 @@ Save pages of the PDF document as PNG images into specified directory. If the de
 
 
 ### Convert PDF to TIFF
-```sh
+```bash
 asposepdftool tiff <PDF-file> [<destination-directory-or-file>] [-separate] [-1bpp] [-skipblank] [-brightness=value]
 ```
 Save PDF document as TIFF image
@@ -304,7 +329,7 @@ Options:
 
 
 ### Add page numbering
-```sh
+```bash
 asposepdftool apn <PDF-file> [result-file] [-font=font_name>] [-size=font_size] [-b] [-i] [-l|-r]
 ```
 Add pages numeration
@@ -321,7 +346,7 @@ Options:
 
 
 ### Convert PDF to Word
-```sh
+```bash
 asposepdftool docx [-ef] <PDF-file> [result-file]
 ```
 Convert the PDF document into DOCX format.
@@ -334,7 +359,7 @@ Options:
 
 
 ### Convert PDF to Excel
-```sh
+```bash
 asposepdftool xlsx <PDF-file> [result-file]
 ```
 Convert the PDF document into XLSX format.
@@ -343,7 +368,7 @@ Convert the PDF document into XLSX format.
 
 
 ### Convert PDF to Powerpoint
-```sh
+```bash
 asposepdftool pptx <PDF-file> [result-file]
 ```
 Convert the PDF document into PPTX format.
@@ -352,7 +377,7 @@ Convert the PDF document into PPTX format.
 
 
 ### Convert PDF to SVG
-```sh
+```bash
 asposepdftool svg <PDF-file> [result-file]
 ```
 Convert the PDF document into SVG format.
@@ -361,7 +386,7 @@ Convert the PDF document into SVG format.
 
 
 ### Convert PDF to XPS
-```sh
+```bash
 asposepdftool xps <PDF-file> [result-file]
 ```
 Convert the PDF document into SVG format.
@@ -370,7 +395,7 @@ Convert the PDF document into SVG format.
 
 
 ### Convert PCL to PDF
-```sh
+```bash
 asposepdftool pcl2pdf <input-file> [PDF-file]
 ```
 Convert the PCL document into PDF
@@ -379,7 +404,7 @@ Convert the PCL document into PDF
 
 
 ### Convert PostScript to PDF
-```sh
+```bash
 asposepdftool ps2pdf <input-file> [PDF-file]
 ```
 Convert the PS document into PDF
@@ -388,7 +413,7 @@ Convert the PS document into PDF
 
 
 ### Convert SVG to PDF
-```sh
+```bash
 asposepdftool svg2pdf <input-file> [PDF-file]
 ```
 Convert the SVG document into PDF
@@ -397,7 +422,7 @@ Convert the SVG document into PDF
 
 
 ### Convert TeX to PDF
-```sh
+```bash
 asposepdftool svg2pdf <input-file> [PDF-file]
 ```
 Convert the TEX document into PDF
@@ -406,7 +431,7 @@ Convert the TEX document into PDF
 
 
 ### Convert XPS to PDF
-```sh
+```bash
 asposepdftool xps2pdf <input-file> [PDF-file]
 ```
 Convert the XPS document into PDF
@@ -415,7 +440,7 @@ Convert the XPS document into PDF
 
 
 ### Convert XSL-FO to PDF
-```sh
+```bash
 asposepdftool xslfo2pdf <input-file> [PDF-file]
 ```
 Convert the XSL-FO document into PDF
