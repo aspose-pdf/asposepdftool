@@ -1,7 +1,7 @@
 class Asposepdftool < Formula
   desc "Aspose.PDF CLI App"
   homepage "https://github.com/aspose-pdf/asposepdftool"
-  version "26.5.0"
+  version "26.6.0"
   license :cannot_represent # This tool is distributed under a custom license. See LICENSE.txt in the repository for details.
 
   livecheck do
@@ -13,10 +13,10 @@ class Asposepdftool < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/aspose-pdf/asposepdftool/raw/refs/tags/v#{version}/asposepdftool_macos_arm64.tar.bz2"
-      sha256 "f2b3cc426b57a5b1baa0224e090b2f462bffe07430cd88675ed1a43592d0049b"
+      sha256 "d555f89cc4b0ecf8309b20a93ef84dd03153a39e22138385f837219d3e05247f"
     else
       url "https://github.com/aspose-pdf/asposepdftool/raw/refs/tags/v#{version}/asposepdftool_macos_x86_64.tar.bz2"
-      sha256 "f9c5483cec946cec86052d3312140f0bef8327482d8614e9d9deb5db2dde991e"
+      sha256 "f3e38f356fb035932456b0d133552dfbb48c28fb83869f2a505521c290fae919"
     end
   end
 
